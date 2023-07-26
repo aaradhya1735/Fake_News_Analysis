@@ -1,3 +1,4 @@
 # Fake_News_Analysis
+Link to download data file : https://drive.google.com/file/d/1dUfKnlI1fZ9HnH4EI6BXl774m6Q9qwgX/view?usp=sharing
 
 This code appears to be a basic implementation of a text classification project using Natural Language Processing (NLP) techniques and a logistic regression model. The project takes a dataset of news articles, preprocesses the text by removing special characters, converting to lowercase, stemming words, and removing stopwords. The cleaned text is then converted into numerical features using TF-IDF vectorization. The data is split into training and testing sets, and a logistic regression model is trained on the training data. The accuracy of the model is evaluated on both the training and testing data. Finally, the model is tested on a new data point, and the predicted label is printed along with the actual label.
