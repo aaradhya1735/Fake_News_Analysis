@@ -1,0 +1,42 @@
+The provided code is a Python script that performs the following tasks:
+
+1. Imports the required libraries:
+   - `pandas`: For data manipulation and analysis.
+   - `re`: For regular expressions to process text.
+   - `stopwords` and `PorterStemmer` from `nltk.corpus` and `nltk.stem.porter`, respectively: For text preprocessing.
+   - `TfidfVectorizer` from `sklearn.feature_extraction.text`: To convert text data to numerical vectors using TF-IDF (Term Frequency-Inverse Document Frequency).
+   - `train_test_split` from `sklearn.model_selection`: To split the dataset into training and testing sets.
+   - `LogisticRegression` from `sklearn.linear_model`: To create and train a Logistic Regression model.
+   - `accuracy_score` from `sklearn.metrics`: To calculate the accuracy score for the model.
+
+2. Downloads the NLTK stopwords for the English language and prints the list of stopwords.
+
+3. Loads a dataset from a CSV file named 'train.csv' into a pandas DataFrame called `news_dataset`.
+
+4. Counts the number of missing values in the dataset and replaces any null values with an empty string.
+
+5. Merges the 'author' name and 'title' of each news article into a new column called 'content'.
+
+6. Preprocesses the 'content' column by converting text to lowercase, removing non-alphabetic characters, and applying stemming to reduce words to their root form.
+
+7. Separates the preprocessed 'content' column as feature data (`X`) and the 'label' column as target data (`Y`).
+
+8. Converts the textual data in `X` to numerical data using the TF-IDF Vectorizer.
+
+9. Splits the data into training and testing sets, using 80% of the data for training and 20% for testing. The `stratify` parameter ensures that the class distribution is balanced in both sets, and the `random_state` parameter is set to 2 for reproducibility.
+
+10. Creates a Logistic Regression model.
+
+11. Trains the model on the training data.
+
+12. Calculates the accuracy score of the model on both the training and test data.
+
+13. Selects the first data point from the test data for model testing.
+
+14. Makes a prediction using the trained model on the new data point.
+
+15. Prints the result of the model testing, indicating whether the news is classified as "Real" (label 0) or "Fake" (label 1).
+
+16. Prints the actual label of the first data point in the test data.
+
+The script performs text preprocessing, converts textual data into numerical vectors using TF-IDF, trains a Logistic Regression model, and evaluates its accuracy on both the training and test data. It also demonstrates making predictions on new data using the trained model.
